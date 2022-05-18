@@ -10,7 +10,8 @@ class LinkedList:
     def printList(self):
         printnode = self.head
         while printnode is not None:
-            print(printnode.data)
+            x = printnode.data
+            print("{} ".format(x), end = "")
             printnode = printnode.next
 
     def insert_at_front(self, new_data):
@@ -110,13 +111,13 @@ list2.insert_at_end(2)
 #list2.printList()
 
 ## SumLists
-print("SumLists")
+print("Testing SumLists")
 print("Input: (7-> 1 -> 6) + (5 -> 9 -> 2)")
 print("List 1: ")
 list1.printList()
-print("List 2: ")
+print("\nList 2: ")
 list2.printList()
-print("Output: 2 -> 1 -> 9")
+print("\nOutput: 2 -> 1 -> 9")
 list3 = SumLists(list1, list2)
 list3.printList()
 
@@ -134,12 +135,12 @@ list5.head.next = Node(9)
 list5.insert_at_end(5)
 
 ## SumLists_Rev
-print("SumList_Alt")
+print("\nTesting SumLists Follow Up")
 print("Input: (6 -> 1 -> 7) + (2 -> 9 -> 5)")
 print("List 4: ")
 list4.printList()
-print("List 5: ")
+print("\nList 5: ")
 list5.printList()
-print("Output: 9 -> 1 -> 2")
+print("\nOutput: 9 -> 1 -> 2")
 list6 = SumLists_Rev(list4, list5)
 list6.printList()
